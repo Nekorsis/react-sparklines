@@ -1765,7 +1765,7 @@ var SparklinesBars = function (_React$Component) {
             width: width,
             height: Math.max(0, height - p.y),
             style: style,
-            onMouseMove: onMouseMove && onMouseMove.bind(_this2, p, data[i])
+            onMouseMove: onMouseMove && onMouseMove.bind(_this2, p, data, i)
           });
         })
       );

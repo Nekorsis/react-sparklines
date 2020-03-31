@@ -35,7 +35,7 @@ export default class SparklinesBars extends React.Component {
             width={width}
             height={Math.max(0, height - p.y)}
             style={style}
-            onMouseMove={onMouseMove && onMouseMove.bind(this, p, data[i])}
+            onMouseMove={onMouseMove && onMouseMove.bind(this, p, data, i)}
           />,
         )}
       </g>
