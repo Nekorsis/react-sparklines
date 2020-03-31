@@ -16,7 +16,7 @@ export default class SparklinesBars extends React.Component {
   };
 
   render() {
-    const { points, height, style, barWidth, margin, onMouseMove } = this.props;
+    const { points, height, style, barWidth, margin, onMouseMove, data } = this.props;
     const strokeWidth = 1 * ((style && style.strokeWidth) || 0);
     const marginWidth = margin ? 2 * margin : 0;
     const width =
@@ -35,7 +35,7 @@ export default class SparklinesBars extends React.Component {
             width={width}
             height={Math.max(0, height - p.y)}
             style={style}
-            onMouseMove={onMouseMove && onMouseMove.bind(this, p)}
+            onMouseMove={onMouseMove && onMouseMove.bind(this, p, data[i])}
           />,
         )}
       </g>
